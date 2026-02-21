@@ -55,3 +55,29 @@ git add (o que)
 # Tornando arquivo permanente
 
 git add .(adiciona tudo)
+
+# TAG
+
+git show (nome da tag)
+
+criando tags: 
+ - leve (rotulo interno [não é release -> temporaria])
+ - anotada
+
+git tag -a(anotated) v1.0.0 -m (mensagem)
+    (versionamento semântico)
+    MAJOR.MINOR.PATCH
+
+    v1.0.0
+    bug arrumado
+    v1.0.1
+    adicionou nova funcionalidade
+    v1.1.0 (patch da minor 1 ainda é zero)
+    subtração aprimorada em desempenho
+    v1.1.1
+    modifica o modo de utilizar uma funcionalidade previa (breaking change)
+        -> muda o jeito de se utilizar
+        precisa passar uma manual de transição para o usuario
+    v2.0.0
+    "soma" passou  a ser chamada "sum" (breaking change)
+    v3.0.0
