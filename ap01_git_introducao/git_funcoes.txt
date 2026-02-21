@@ -84,11 +84,11 @@ git tag -a(anotated) v1.0.0 -m (mensagem)
 
 # Restaurando historico
 
-git restore (arquivo[s])
+git restore (arquivo[s]) (--staged)  
 
 estado do arquivo -> Pode ser staged e modified ao mesmo tempo (uma das alterações ira ao commit e a outra não)
 
-git diff (ve o que foi modificado)
+git diff (--staged) (ve o que foi modificado) 
 
 git push (origin) (nome da tag)
 
