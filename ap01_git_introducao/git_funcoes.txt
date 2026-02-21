@@ -1,3 +1,7 @@
+git commit:
+
+https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md
+
 # git config:
 
 // configurando o nome e email do usuario mechendo no repositoris
@@ -28,7 +32,7 @@ git config --list
 git config --list --show-origin
 git config --unset core.editor
 git config (--gloabal) --edit
-
+git status (--short)
 
 # Estados dos arquivos
 
