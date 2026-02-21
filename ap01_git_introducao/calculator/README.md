@@ -10,7 +10,7 @@
 ## Objetivo
 Realizar uma calculadora em python com controle de versões
 
-### funcionalidades planejadas para V1.0
+### funcionalidades planejadas
 -> soma  
 
 -> subtração  
