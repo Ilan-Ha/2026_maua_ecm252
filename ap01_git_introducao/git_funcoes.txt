@@ -1,0 +1,53 @@
+# git config:
+
+// configurando o nome e email do usuario mechendo no repositoris
+
+: user.name nome ou "nome com espaço"
+: user.email so_o_email_ja_que_nao_tem_espaço
+
+local: válido somente para o repositório atual
+    --local
+
+global: válido para todos os repositórios criados pelo usuário atualmente no SO
+    --global
+
+System:
+
+# Criando repositório e configurando git
+
+git init 
+    (cria a pasta .git)
+git branch -m main
+    (-m: renomiando a branch atual para "main")
+git config --global init.defaultBranch main
+    (todas as branchs criadas no SO atual serao criadas [git init] ja com o nome "main")
+git config --global core.editor "code --wait"
+    (caso um comando necessite de um editor de texto, uma aba sera aberta no VSCode [code] ao invés de na linha de comando. E faz o Code esperar algo ser digitado antes de fechar a aba)
+git config --list
+    (lista as configurações, sai com Q, avança com ENTER)
+git config --list --show-origin
+git config --unset core.editor
+git config (--gloabal) --edit
+
+
+# Estados dos arquivos
+
+// todo arquivo passa pelo UNTRACKED
+
+: UNTRACKED
+    -> Fora do controle de versão
+    git rm (transforma o arquivo em UNTRACKED)
+git add (o que)
+: TRACKED
+    -> No controle de versão
+    : UNMODIFIED
+        -> Não modificado
+    : MODIFIED
+        -> Modificado e diferente do permante
+    git add -> vai para STAGED
+    : STAGED
+        -> Participara do próximo commit
+
+# Tornando arquivo permanente
+
+git add .(adiciona tudo)
