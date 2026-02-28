@@ -129,6 +129,10 @@ pull request:
 -> pedido de puxar o conteudo da branch para a main
 (um faz o código e outro revisa o código)
 
+adicionando colaborador:
+    - configurações do repositório
+    - colaborators (user name ou github)
+
 atualizar repositório local após os merge:
     git pull (origin) main
     git branch -d divisao
