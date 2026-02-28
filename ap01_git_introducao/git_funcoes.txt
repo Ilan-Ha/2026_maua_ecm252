@@ -93,3 +93,54 @@ git diff (--staged) (ve o que foi modificado)
 git push (origin) (nome da tag)
 
 removendo tag -> git tag -d (delete) <nome da tag>
+
+
+https://github.com/Ilan-Ha/2026_maua_ecm252.git
+token:
+- avatar
+- settings
+- developer settings
+- Personal acess tokens
+- token (classic)
+- generate new token (classic)
+- note (para que serve o token, convenção kebab case)
+-> configura as permissões para ser um usuario autorizado e com permissões
+:
+no onedrive
+:
+
+formato do link:
+https://(token)@github.com/(usuario)/(repo).git
+ou
+link do repositório com token@ antes do github 
+
+git remote add (origin) link
+// direito de fazer push
+git push (para onde) (o que)
+git push origin main
+
+(leva as tags para o link)
+git push origin --tags
+ou
+(so algumas tags)
+git push origin v1.0.0 v1.2.0
+
+pull request:
+-> pedido de puxar o conteudo da branch para a main
+(um faz o código e outro revisa o código)
+
+atualizar repositório local após os merge:
+    git pull (origin) main
+    git branch -d divisao
+    git push origin --delete <branch-name> (tira do origin)
+
+git pull -> puxa as alterações feitas na branch atual que não estão no repositório local
+
+git status -v
+git log --oneline
+nova branch: (novo ponteiro)
+git checkout -b divisao
+
+git branch -> monstra as branchs
+git branch -r -> mostra as branchs remotas
+-a (mostra todas)
