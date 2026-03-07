@@ -2,6 +2,8 @@ alt: permite mover linhas selecionadas para cima e para baixo
 
 ctrl + ; => auto comentario
 
+ctrl + space => retorna o menu de possiveis continuações do vscode
+
 0° npm create vite (nome) -- --template react
 1° npm install
 2° npm run dev
