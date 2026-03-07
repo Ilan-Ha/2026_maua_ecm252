@@ -1,0 +1,53 @@
+alt: permite mover linhas selecionadas para cima e para baixo
+
+0° npm create vite (nome) -- --template react
+1° npm install
+2° npm run dev
+
+
+ap004 -> props: quando usar um componente pode expecificar seus dados
+
+pagina responsiva: muda a resolução -> aparencia se adapta
+
+angular (pagina de exemplo)
+
+dev tools online: ctrl + shift + i
+
+pagina responsiva (respeito ao horizontal/largura -> evitar experiência de scroll horizontal): 
+
+instalando bootstrap:
+    - usando um cdn (content delivery metwork [ rede de entrega de conteudo]) => link no http
+    - instalando o bootstap no projeto (npm install bootstap) -> tem que importar o que vai utilizar (fica nos node_modules)
+    - usando uma biblioteca (vem como componentes react)
+
+Bootstrap
+    - componentes
+    - classes utilitarias
+    - grid system (css nível baixo, media quaries)
+
+grid system: divide a tela em 12 colunas por padrão
+    -> decide quantas colunas cada objeto ocupa (ao invés de tamanho)
+    -> decide se um objeto pode ficar ao lado do outro
+    -> tamanho da tela influência na largura de cada uma das 12 colunas
+
+versão .min: arquivo minificado para importar (menos bytes)
+    - sem o min serve mais para entender e estudar o pacote
+
+biblioteca de icones:
+    fontawesome.com
+    npm i @fortawesome/fontawesome-free
+
+div já com um template: .(nome do template)
+    ex: .container (enter)
+        -> emet
+    
+    container => centraliza objeto e se a tela tiver tamanho o bastante, deixa um pouco de margem
+
+3 jeitos de importar:
+    - import {nome} from 'de onde' (importa um nomeado)
+    - export default => import nome from 'de onde' [pode decidir o nome]
+    - import * as nome from 'de onde' (importa todos os nomeados)
+
+    export ~~ public
+
+    col-12 -> indica que um objeto tem direito as 12 colunas
