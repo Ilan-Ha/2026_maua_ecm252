@@ -1,0 +1,19 @@
+name: CI Pipeline
+
+on: [push]
+
+jobs:
+  run-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run app with DB password
+        env:
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: node app.js
