@@ -15,7 +15,7 @@ const conectar = async () => {
         dbConection = await mysql2.createConnection({
             host: 'maus-ecm252-ilan-79a5.e.aivencloud.com',
             user: 'avnadmin',
-            password: 'AVNS_DNCSl3jZX-Sd78nR56Q',
+            password: '',
             database: 'defaultdb',
             port: '26576'
         })
