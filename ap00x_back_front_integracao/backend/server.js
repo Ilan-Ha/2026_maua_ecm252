@@ -1,12 +1,7 @@
 const express = require('express')
 const mysql2 = require('mysql2/promise')
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: '.env' });
 
-const dbPassword = process.env.DB_PASSWORD;
-
-if (!dbPassword) {
-  throw new Error("DB_PASSWORD is not defined");
-}
 
 const app = express()/// construcao de endpoints
 /// função midware
@@ -20,11 +15,11 @@ let dbConection
 const conectar = async () => {
     try {
         dbConection = await mysql2.createConnection({
-            host: 'maua-2026-ecm252-ilan-79a5.a.aivencloud.com',
-            user: 'avnadmin',
-            password: dbPassword,
-            database: 'defaultdb',
-            port: '26576'
+            host: process.env.HOST,
+            user: process.env.DB_USER,
+            password: process.env.PASSWORD,
+            database: process.env.DATABASE,
+            port: process.env.PORT
         })
         console.log('Conectado ao MySQL')
     } catch (error) {
