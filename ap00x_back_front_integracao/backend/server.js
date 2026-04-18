@@ -101,14 +101,17 @@ app.post('/tarefas', async (req,res)=>{
 
 /// fazer a rota para atualizar e a rota para remover
 
-app.put('/tarefas', async (req,res) => {
+// / atualiza um lembrete -> /tarefas/:id
+app.put('/tarefas/:id', async (req,res) => {
     try {
-        const {cod_tarefa,titulo,descricao} = req.body
-        const [resultado] = await dbConection.query(
-            `UPDATE tb_tarefa SET titulo = ?, descricao = ? WHERE cod_tarefa = ?`,
-            [titulo,descricao,cod_tarefa]
+        const {id} = req.params
+        const {titulo,descricao} = req.body
+        const sql = 'UPDATE tb_tarefa SET titulo = ?, descricao = ? WHERE cod_tarefa = ?'
+        await dbConection.query(
+            sql,
+            [titulo,descricao,id]
         )
-        res.status(201).json(resultado)
+        res.status(201).json({id,titulo,descricao})
     } catch (error) {
         console.log(error)
         res.status(500).json({
@@ -117,18 +120,21 @@ app.put('/tarefas', async (req,res) => {
     }
 })
 
-app.delete('/tarefas', async(req,res)=>{
+app.delete('/tarefas/:id', async(req,res)=>{
     try {
-        const {cod_tarefa} = req.body
-        const [resultado] = await dbConection.query(
-            `DELETE FROM tb_tarefa WHERE cod_tarefa = ?`,
-            [cod_tarefa]
+        const {id} = req.params
+        const sql = 'DELETE FROM tb_tarefa WHERE cod_tarefa = ?' 
+        await dbConection.query(
+            sql,
+            [id]
         )
-        res.status(200).json(resultado)
+        res.status(200).json({
+            mensagem: 'Tarefa excluida'
+        })
     } catch (error) {
         console.log(error)
         res.status(500).json({
-        erro: 'Erro ao deletar as tarefas'
+        erro: 'Erro ao deletar a tarefa'
     })
     }
 })
