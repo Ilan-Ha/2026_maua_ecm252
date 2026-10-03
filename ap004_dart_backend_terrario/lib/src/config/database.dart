@@ -10,6 +10,6 @@ MySQLConnectionPool criarPool(AppConfig config) {
     databaseName: config.dbName,
     maxConnections: config.dbPoolSize,
     secure: false,
-    allowPublicKeyRetrieval: 
+    allowPublicKeyRetrieval: true 
   );
 }
