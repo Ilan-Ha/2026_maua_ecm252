@@ -1,0 +1,20 @@
+name: ap004_dart_backend_terrario
+description: A sample command-line application.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.8.1
+
+# Add regular dependencies here.
+dependencies:
+  dotenv: ^4.2.0
+  mysql_dart: ^3.0.0
+  shelf: ^1.4.2
+  shelf_router: ^1.1.4
+  shelf_swagger_ui: ^2.0.0
+  # path: ^1.8.0
+
+dev_dependencies:
+  lints: ^6.1.0
+  test: ^1.31.0
